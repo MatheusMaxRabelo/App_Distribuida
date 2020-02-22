@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\Desktop\\AppDistribuido\\GettingReady\\GettingReady\\GettingReady.csproj": {}
+    "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\Desktop\\AppDistribuido\\GettingReady\\GettingReady\\GettingReady.csproj": {
+    "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\Desktop\\AppDistribuido\\GettingReady\\GettingReady\\GettingReady.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj",
         "projectName": "GettingReady",
-        "projectPath": "C:\\Users\\mathe\\Desktop\\AppDistribuido\\GettingReady\\GettingReady\\GettingReady.csproj",
+        "projectPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\Desktop\\AppDistribuido\\GettingReady\\GettingReady\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,6 +42,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "BlazorInputFile": {
+              "target": "Package",
+              "version": "[0.1.0-preview-00002, )"
+            },
             "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
               "version": "[3.1.0-preview4.19579.2, )"
