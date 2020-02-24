@@ -1,15 +1,15 @@
-﻿@page "/Alunos/Create"
+﻿@page "/Admin/Alunos/Create"
 @inherits CreatePage
 
 <section class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row">
             <div class="col-sm-6">
                 <h1>Adicionar Alunos</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="Alunos/List">Alunos</a></li>
+                    <li class="breadcrumb-item"><a href="Admin/Alunos/List">Alunos</a></li>
                     <li class="breadcrumb-item active">Adicionar</li>
                 </ol>
             </div>
@@ -18,7 +18,7 @@
 </section>
 <section class="content">
     <div class="container-fluid">
-        <div class="card card-lightblue">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
                     <i class="fas fa-arrow-up mr-2"></i>
@@ -48,9 +48,8 @@
                                     <td>@Aluno.Matricula</td>
                                     <td>@Aluno.Nome.ToUpper()</td>
                                     <td>@Aluno.areaId</td>
-                                    <td style="width:90px;">
-                                        <button type="button" class="btn btn-outline-warning btn-sm"><span><i class="fa fa-edit"></i></span></button>
-                                        <button type="button" class="btn btn-outline-danger btn-sm"><span><i class="fa fa-trash"></i></span></button>
+                                    <td style="width:30px;">
+                                        <button type="button" class="btn btn-outline-danger btn-sm" @onclick="@(()=>DeleteAluno(Aluno.Matricula))"><span><i class="fa fa-trash"></i></span></button>
                                     </td>
                                 </tr>
                             }

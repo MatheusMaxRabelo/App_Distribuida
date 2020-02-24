@@ -20,7 +20,6 @@
     <Folder Include="Pages\Monitor\" />
     <Folder Include="Pages\Professor\" />
     <Folder Include="Validation\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
 </Project>

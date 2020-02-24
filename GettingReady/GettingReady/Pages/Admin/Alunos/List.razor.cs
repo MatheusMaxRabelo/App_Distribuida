@@ -10,9 +10,10 @@ namespace GettingReady.Pages.Admin.Alunos
 {
     public class ListPage:ComponentBase
     {
+        [Inject]
+        public NavigationManager navigationManager { get; set; }
+
         public List<Aluno> Alunos { get; set; }
-
-
         public bool isFiltered { get; set; } = false;
         public bool isSortedAsc { get; set; } = false;
         public string OrdenarPor { get; set; }
@@ -20,6 +21,14 @@ namespace GettingReady.Pages.Admin.Alunos
         protected override Task OnInitializedAsync()
         {
             Alunos = new List<Aluno>();
+            Alunos.Add(new Aluno
+            {
+                Id=1,
+                Nome="Matheus Maximiano Rabelo",
+                Matricula=599950,
+                areaId=333,
+                areaConhecimento=new AreaConhecimento { Nome="Sistemas de Informação"}
+            });
             return base.OnInitializedAsync();
         }
         protected void SortTable(string campoOrdenar)
@@ -51,6 +60,11 @@ namespace GettingReady.Pages.Admin.Alunos
                 return "fa-sort-up";
             else
                 return "fa-sort-down";
+        }
+
+        protected void NavigateTo(int id)
+        {
+            navigationManager.NavigateTo($"Admin/Alunos/Detail/{id}");
         }
     }
 }
