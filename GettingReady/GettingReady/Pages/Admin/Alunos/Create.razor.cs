@@ -76,6 +76,11 @@ namespace GettingReady.Pages.Admin.Alunos
             else
                 return "fa-sort-down";
         }
+        protected void DeleteAluno(int matricula)
+        {
+            Alunos.Remove(Alunos.Where(x => x.Matricula == matricula).FirstOrDefault());
+            StateHasChanged();
+        }
 
     }
 }
