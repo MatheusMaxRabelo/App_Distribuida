@@ -1154,11 +1154,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\GettingReady.csproj",
+      "projectUniqueName": "C:\\Users\\Merizito\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj",
       "projectName": "GettingReady",
-      "projectPath": "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\GettingReady.csproj",
+      "projectPath": "C:\\Users\\Merizito\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj",
       "packagesPath": "C:\\Users\\Merizito\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\obj\\",
+      "outputPath": "C:\\Users\\Merizito\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Merizito\\AppData\\Roaming\\NuGet\\NuGet.Config",
