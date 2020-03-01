@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj": {}
+    "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\GettingReady.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj": {
+    "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\GettingReady.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj",
+        "projectUniqueName": "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\GettingReady.csproj",
         "projectName": "GettingReady",
-        "projectPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\GettingReady.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady\\obj\\",
+        "projectPath": "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\GettingReady.csproj",
+        "packagesPath": "C:\\Users\\Merizito\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Merizito\\Desktop\\App_Distribuida-master\\GettingReady\\GettingReady\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Merizito\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"

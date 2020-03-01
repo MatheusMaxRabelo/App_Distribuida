@@ -10,5 +10,8 @@ namespace GettingReady.Model
     {
         public int Matricula { get; set; }
         public string Nome { get; set; }
+        public Turma turmaProfessor { get; set; }
+        public AreaConhecimento areaConhecimento { get; set; }
+        //public Disciplina disciplinaProfessor { get; set; }
     }
 }

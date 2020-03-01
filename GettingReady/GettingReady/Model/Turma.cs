@@ -9,5 +9,6 @@ namespace GettingReady.Model
     public class Turma : Entidade
     {
         public int DisciplinaId { get; set; }
+        public int turmaId { get; set; }
     }
 }
