@@ -97,27 +97,6 @@ using Blazored.Modal.Services;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 10 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
-using Blazored;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 11 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
-using Blazored.Modal;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 12 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
-using Blazored.Modal.Services;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Admin/Alunos/Create")]
     public partial class Create : CreatePage
     {
