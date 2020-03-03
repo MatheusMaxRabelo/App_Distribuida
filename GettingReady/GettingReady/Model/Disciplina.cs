@@ -9,7 +9,8 @@ namespace GettingReady.Model
     public class Disciplina : Entidade
     {
         public string Nome { get; set; }
-        public AreaConhecimento areaConhecimento { get; set; }
-        public IList<Turma> Turmas { get; set; }
+        public List<Curso> Cursos { get; set; }
+        public IList<Aluno> Alunos { get; set; }
+
     }
 }

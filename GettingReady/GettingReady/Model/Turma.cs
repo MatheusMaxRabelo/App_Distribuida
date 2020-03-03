@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Model
 {
-    public class Turma : Entidade
+    public class Turma
     {
-        public int DisciplinaId { get; set; }
+        
     }
 }

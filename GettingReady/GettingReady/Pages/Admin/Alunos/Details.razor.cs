@@ -26,39 +26,33 @@ namespace GettingReady.Pages.Admin.Alunos
             List<Disciplina>  disc = new List<Disciplina>();
             disc.Add(new Disciplina
             {
-                Id=123,
-                Nome = "AED",
-                areaConhecimento = new AreaConhecimento { Nome="Sistemas de Informação"}
+                Id = 123,
+                Nome = "AED"
             });
             disc.Add(new Disciplina
             {
                 Id = 234,
-                Nome = "ATP",
-                areaConhecimento = new AreaConhecimento { Nome = "Sistemas de Informação" }
+                Nome = "ATP"
             });
             disc.Add(new Disciplina
             {
                 Id = 345,
-                Nome = "POO",
-                areaConhecimento = new AreaConhecimento { Nome = "Sistemas de Informação" }
+                Nome = "POO"
             });
             disc.Add(new Disciplina
             {
                 Id = 543,
-                Nome = "AED",
-                areaConhecimento = new AreaConhecimento { Nome = "Engenharia da Computação" }
+                Nome = "AED"
             });
             disc.Add(new Disciplina
             {
                 Id = 253,
-                Nome = "ATP",
-                areaConhecimento = new AreaConhecimento { Nome = "Ciências da Computação" }
+                Nome = "ATP"
             });
             disc.Add(new Disciplina
             {
                 Id = 652,
-                Nome = "POO",
-                areaConhecimento = new AreaConhecimento { Nome = "Ciências da Computação" }
+                Nome = "POO"
             });
 
             Aluno = new AlunoData
@@ -68,7 +62,7 @@ namespace GettingReady.Pages.Admin.Alunos
                     Matricula=599950,
                     Nome = "Matheus Maximiano",
                     areaId = 333,
-                    areaConhecimento = new AreaConhecimento
+                    Curso = new Curso
                     {
                         Id=333,
                         Nome = "Sistemas de Informação"

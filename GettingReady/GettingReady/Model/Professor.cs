@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Model
 {
-    public class Professor : Entidade
+    public class Professor
     {
         public int Matricula { get; set; }
         public string Nome { get; set; }

@@ -1,4 +1,7 @@
-﻿using GettingReady.Model;
+﻿using Blazored.Modal;
+using Blazored.Modal.Services;
+using GettingReady.Model;
+using GettingReady.Shared.Componentes;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -12,6 +15,10 @@ namespace GettingReady.Pages.Admin.Alunos
     {
         [Inject]
         public NavigationManager navigationManager { get; set; }
+        [Inject]
+        public IModalService Modal { get; set; }
+
+        public int AlunoId { get; set; }
 
         public List<Aluno> Alunos { get; set; }
         public bool isFiltered { get; set; } = false;
@@ -23,11 +30,10 @@ namespace GettingReady.Pages.Admin.Alunos
             Alunos = new List<Aluno>();
             Alunos.Add(new Aluno
             {
-                Id=1,
                 Nome="Matheus Maximiano Rabelo",
                 Matricula=599950,
                 areaId=333,
-                areaConhecimento=new AreaConhecimento { Nome="Sistemas de Informação"}
+                Curso=new Curso { Nome="Sistemas de Informação"}
             });
             return base.OnInitializedAsync();
         }
@@ -65,6 +71,29 @@ namespace GettingReady.Pages.Admin.Alunos
         protected void NavigateTo(int id)
         {
             navigationManager.NavigateTo($"Admin/Alunos/Detail/{id}");
+        }
+
+        protected void ConfirmDelete(int matricula, string nome)
+        {
+            AlunoId = matricula;
+            ModalParameters parameters = new ModalParameters();
+            parameters.Add("Mensagem", $"Tem certeza que deseja apagar o aluno \n {nome.ToUpper()} ?");
+            parameters.Add("SimText", "Confirmar");
+            parameters.Add("NaoText", "Cancelar");
+
+            Modal.OnClose += ModalClose;
+            Modal.Show<ConfirmDelete>("Deletar aluno", parameters);
+        }
+
+        private async void ModalClose(ModalResult result)
+        {
+            if (!result.Cancelled)
+            {
+                Alunos.Remove(Alunos.Where(x => x.Matricula == AlunoId).FirstOrDefault());
+                StateHasChanged();
+            }
+
+            Modal.OnClose-=ModalClose;
         }
     }
 }
