@@ -23,7 +23,6 @@ namespace GettingReady.Pages.Admin.Professores
             Professores = new List<Professor>();
             Professores.Add(new Professor
             {
-                Id = 1,
                 Nome = "Kleber Jacques Ferreira de Souza",
                 Matricula = 111111,
             });

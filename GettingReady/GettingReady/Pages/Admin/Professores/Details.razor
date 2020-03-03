@@ -36,11 +36,6 @@
                         <div id="Nome">@Professor.ProfessorInfo.Nome.ToUpper()</div>
                     </div>
 
-                    <div class="col-sm-4 mb-3">
-                        <label for="Curso">Área</label>
-                        <div id="Curso">@Professor.ProfessorInfo.areaConhecimento.Nome.ToUpper()</div>
-                    </div>
-
                 </div>
                 <div class="card card-widget collapsed-card">
                     <div class="card-header bg-info">
@@ -61,7 +56,6 @@
                                 <tr>
                                     <th>Cód. Disciplina</th>
                                     <th> Disciplina</th>
-                                    <th>Curso</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -70,7 +64,6 @@
                                     <tr>
                                         <td>@disciplina.Id</td>
                                         <td>@disciplina.Nome.ToUpper()</td>
-                                        <td>@disciplina.areaConhecimento.Nome.ToUpper()</td>
                                     </tr>
                                 }
                             </tbody>

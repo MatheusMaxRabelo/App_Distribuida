@@ -38,14 +38,14 @@
 
                     <div class="col-sm-4 mb-3">
                         <label for="Curso">Curso</label>
-                        <div id="Curso">@Aluno.AlunoInfo.areaConhecimento.Nome.ToUpper()</div>
+                        <div id="Curso">@Aluno.AlunoInfo.Curso.Nome.ToUpper()</div>
                     </div>
                     
                 </div>
                 <div class="card card-widget collapsed-card">
-                    <div class="card-header bg-info">
+                    <div class="card-header bg-gradient-info" data-card-widget="collapse">
                         <div class="user-block">
-                            <i class="ion ion-ios-paper-outline mr-2"></i>Disciplinas
+                            <i class="ion ion-ios-book-outline mr-2"></i> Cursando <b>@Aluno.Disciplinas.Count</b>  disciplinas
                         </div>
                         <!-- /.user-block -->
                         <div class="card-tools">
@@ -70,7 +70,7 @@
                                     <tr>
                                         <td>@disciplina.Id</td>
                                         <td>@disciplina.Nome.ToUpper()</td>
-                                        <td>@disciplina.areaConhecimento.Nome.ToUpper()</td>
+                                        <td>@Aluno.AlunoInfo.Curso.Nome.ToUpper()</td>
                                     </tr>
                                 }
                             </tbody>

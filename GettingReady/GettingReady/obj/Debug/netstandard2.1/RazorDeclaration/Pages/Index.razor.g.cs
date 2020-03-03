@@ -57,28 +57,42 @@ using GettingReady;
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
-using GettingReady.Pages;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 8 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
 using GettingReady.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
+#line 8 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
 using BlazorInputFile;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
+#line 9 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
 using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
+using Blazored;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
+using Blazored.Modal;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\_Imports.razor"
+using Blazored.Modal.Services;
 
 #line default
 #line hidden

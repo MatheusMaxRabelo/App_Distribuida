@@ -27,37 +27,29 @@ namespace GettingReady.Pages.Admin.Professores
             disc.Add(new Disciplina
             {
                 Id = 4001,
-                Nome = "Algoritmo e Estrutura de Dados",
-                areaConhecimento = new AreaConhecimento { Nome = "Engenharia de Computação - Sistemas de Informação" }
+                Nome = "Algoritmo e Estrutura de Dados"
             });
             disc.Add(new Disciplina
             {
                 Id = 4002,
-                Nome = "Aplicações Distribuídas",
-                areaConhecimento = new AreaConhecimento { Nome = "Sistemas de Informação" }
+                Nome = "Aplicações Distribuídas"
             });
             disc.Add(new Disciplina
             {
                 Id = 4003,
-                Nome = "Tecnologias Web",
-                areaConhecimento = new AreaConhecimento { Nome = "Sistemas de Informação" }
+                Nome = "Tecnologias Web"
             });
             disc.Add(new Disciplina
             {
                 Id = 4004,
-                Nome = "Cálculo 1",
-                areaConhecimento = new AreaConhecimento { Nome = "Engenharia de Computação - Ciência da Computação - Sistemas de Informação" }
+                Nome = "Cálculo 1"
             });
             Professor = new ProfessorData
             {
                 ProfessorInfo = new Model.Professor
                 {
                     Matricula = 111111,
-                    Nome = "Kleber Jacques Ferreira de Souza",
-                    areaConhecimento = new AreaConhecimento
-                    {
-                        Nome = "Tecnologia da Informação"
-                    }
+                    Nome = "Kleber Jacques Ferreira de Souza"
                 },
                 Disciplinas = disc
             };

@@ -6,18 +6,9 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Model
 {
-    public class Turma : Entidade
+    public class Turma
     {
-<<<<<<< HEAD
         public int DisciplinaId { get; set; }
         public int turmaId { get; set; }
-=======
-<<<<<<< Updated upstream
-=======
-        public int DisciplinaId { get; set; }
-        public int turmaId { get; set; }
->>>>>>> Stashed changes
-        
->>>>>>> Matheus
     }
 }

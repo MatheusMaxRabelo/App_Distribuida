@@ -39,11 +39,7 @@ namespace GettingReady.Pages.Admin.Professores
                         Professores.Add(new Professor
                         {
                             Matricula = Convert.ToInt32(Professor[0]),
-                            Nome = Professor[1],
-                            areaConhecimento = new AreaConhecimento
-                            {
-                                Nome = Professor[2]
-                            }
+                            Nome = Professor[1]
                         });
                     }
                 }

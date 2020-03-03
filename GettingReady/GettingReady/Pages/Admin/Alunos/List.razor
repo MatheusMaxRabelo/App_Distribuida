@@ -23,7 +23,7 @@
                         <i class="fa fa-list"></i>
                         <b class="ml-3" style="font-size:15pt">Lista de alunos</b>
                     </h3>
-                        <a href="/Admin/Alunos/Create" class="btn btn-info btn-xs" style="float:right"><span><i class="fa fa-plus"></i></span></a>
+                        <a href="/Admin/Alunos/Create" class="btn btn-info btn-sm" style="float:right"><span><i class="fa fa-plus"></i> Adicionar </span></a>
             </div>
             <div class="card-body">
                 @if (Alunos.Count > 0)
@@ -43,11 +43,11 @@
                                 <tr>
                                         <td>@Aluno.Matricula</td>
                                         <td>@Aluno.Nome.ToUpperInvariant()</td>
-                                        <td>@Aluno.areaConhecimento.Nome.ToUpperInvariant()</td>
+                                        <td>@Aluno.Curso.Nome.ToUpperInvariant()</td>
                                         <td style="width:105px;">
-                                            <button type="button" class="btn btn-outline-info btn-sm" @onclick="(()=>NavigateTo(Aluno.Matricula))"><span><i class="fa fa-eye"></i></span></button>
+                                            <button type="button" class="btn btn-outline-info btn-sm"  @onclick="(()=>NavigateTo(Aluno.Matricula))"><span><i class="fa fa-eye"></i></span></button>
                                             <button type="button" class="btn btn-outline-warning btn-sm"><span><i class="fa fa-edit"></i></span></button>
-                                            <button type="button" class="btn btn-outline-danger btn-sm" @onclick="(()=>DeleteAluno(Aluno.Matricula))"><span><i class="fa fa-trash"></i></span></button>
+                                            <button type="button" class="btn btn-outline-danger btn-sm" @onclick="(()=>ConfirmDelete(Aluno.Matricula,Aluno.Nome))"><span><i class="fa fa-trash"></i></span></button>
                                         </td>
                                 </tr>
                             }

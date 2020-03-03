@@ -286,3 +286,15 @@ C:\Users\Merizito\Desktop\App_Distribuida-master\GettingReady\GettingReady\obj\D
 C:\Users\Merizito\Desktop\App_Distribuida-master\GettingReady\GettingReady\obj\Debug\netstandard2.1\GettingReady.pdb
 C:\Users\Merizito\Desktop\App_Distribuida-master\GettingReady\GettingReady\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Users\Merizito\Desktop\App_Distribuida-master\GettingReady\GettingReady\obj\Debug\netstandard2.1\blazor\blazor.boot.json
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Alunos\Edit.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\Create.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\Details.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\List.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Shared\Componentes\ConfirmDelete.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Alunos\Edit.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\Create.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\Details.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\List.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\obj\Debug\netstandard2.1\Razor\Shared\Componentes\ConfirmDelete.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\bin\Debug\netstandard2.1\dist\_framework\_bin\Blazored.Modal.dll
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\GettingReady\bin\Debug\netstandard2.1\Blazored.Modal.dll

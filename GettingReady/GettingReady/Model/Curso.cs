@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Model
 {
-    public class AreaConhecimento : Entidade
+    public class Curso:Entidade
     {
         public string Nome { get; set; }
+        public IList<Disciplina> Disciplinas { get; set; }
+        public IList<Aluno> Alunos { get; set; }
     }
 }

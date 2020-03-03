@@ -10,5 +10,6 @@ namespace GettingReady.Model
     {
         public string Pergunta { get; set; }
         public int AssuntoId { get; set; }
+        public IList<Questao> Questoes { get; set; }
     }
 }

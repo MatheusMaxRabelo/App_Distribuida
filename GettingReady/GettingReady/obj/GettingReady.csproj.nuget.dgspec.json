@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[0.1.0-preview-00002, )"
             },
+            "Blazored.Modal": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
               "version": "[3.1.0-preview4.19579.2, )"
