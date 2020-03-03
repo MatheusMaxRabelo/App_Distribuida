@@ -66,5 +66,11 @@ namespace GettingReady.Pages.Admin.Alunos
         {
             navigationManager.NavigateTo($"Admin/Alunos/Detail/{id}");
         }
+
+        protected void DeleteAluno(int matricula)
+        {
+            Alunos.Remove(Alunos.Where(x => x.Matricula == matricula).FirstOrDefault());
+            StateHasChanged();
+        }
     }
 }

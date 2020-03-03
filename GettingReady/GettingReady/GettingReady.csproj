@@ -16,7 +16,6 @@
   <ItemGroup>
     <Folder Include="CrossCutting\" />
     <Folder Include="Pages\Access\" />
-    <Folder Include="Pages\Admin\Professores\" />
     <Folder Include="Pages\Monitor\" />
     <Folder Include="Pages\Professor\" />
     <Folder Include="Validation\" />
