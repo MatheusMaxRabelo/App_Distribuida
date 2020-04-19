@@ -1,0 +1,8 @@
+﻿@inherits ConfirmDeletePage
+<div class="mb-4">
+    @Mensagem  <br />
+</div>
+<div class="float-right">
+    <button class="btn btn-danger btn-sm" @onclick="(()=>Confirm())"> @SimText</button>
+    <button class="btn btn-info btn-sm" @onclick="(()=>Cancelar())"> @NaoText</button>
+</div>
