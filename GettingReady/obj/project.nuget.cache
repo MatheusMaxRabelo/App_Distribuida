@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kiv4+IL6cwpNY04Aml34mNCvXP9rp8PsapqUnGr69L379jDaqY3XD3KO/zS1Wj+LH0ZLgWHDS0VklceyV3/Aqg==",
+  "dgSpecHash": "gVed9P5hr4k4k5KLGum6Mvd3LTukMbDY/W7KrRf2n9VFGTfSfISioCVM6DTSy+cOs29E4lhN4omzaHgEHrw1pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mathe\\Desktop\\GetReady\\GettingReady\\GettingReady.csproj",
+  "projectFilePath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mathe\\.nuget\\packages\\blazored.modal\\3.1.2\\blazored.modal.3.1.2.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\blazorinputfile\\0.1.0-preview-00002\\blazorinputfile.0.1.0-preview-00002.nupkg.sha512",

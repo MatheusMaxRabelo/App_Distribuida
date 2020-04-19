@@ -17,12 +17,12 @@
 
   <ItemGroup>
     <Folder Include="CrossCutting\" />
-    <Folder Include="Pages\Access\" />
     <Folder Include="Pages\Admin\Cursos\" />
     <Folder Include="Pages\Admin\Disciplinas\" />
     <Folder Include="Pages\Admin\Professores\" />
     <Folder Include="Pages\Monitor\" />
-    <Folder Include="Pages\Professor\" />
+    <Folder Include="Pages\Professor\Materiais\" />
+    <Folder Include="Pages\Professor\Monitoria\" />
     <Folder Include="Validation\" />
   </ItemGroup>
 
