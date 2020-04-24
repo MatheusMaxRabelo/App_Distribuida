@@ -3,6 +3,7 @@ using Blazored.Modal.Services;
 using GettingReady.Model;
 using GettingReady.Shared.Componentes;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,25 +72,6 @@ namespace GettingReady.Pages.Admin.Alunos
             StateHasChanged();
         }
 
-        protected void Paginacao(int quant)
-        {
-            Pagina.ItensPagina = quant;
-            Pagina.Total = Alunos.Count / quant;
-            PaginarAlunos();
-            StateHasChanged();
-        }
-        protected void PaginarAlunos()
-        {
-            Pagina.Total = Alunos.Count / Pagina.ItensPagina;
-            Alunos = aux.Skip((Pagina.Atual - 1) * Pagina.ItensPagina)
-                .Take(Pagina.ItensPagina).ToList();
-        }
-        protected void NextPage(int page)
-        {
-            Pagina.Atual = page;
-            PaginarAlunos();
-            StateHasChanged();
-        }
         protected string SortIcon(string campoOrdenado)
         {
             if (OrdenarPor != campoOrdenado)

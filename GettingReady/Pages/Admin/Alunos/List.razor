@@ -1,4 +1,4 @@
-﻿@page "/Admin/Alunos/List"
+﻿@page "/Admin/Alunos/Index"
 @inherits ListPage
 
 <section class="content-header">
@@ -29,7 +29,7 @@
                 <span style="@MessageColor">@Message</span>
                 @if (Alunos.Count > 0)
                 {
-                    <table id="example2" class="table table-striped table-bordered dataTable">
+                    <table id="example" class="table table-striped table-bordered dataTable">
                         <thead>
                             <tr>
                                 <th @onclick="@(() => SortTable("Matricula"))">Matrícula <span class="fa @(SortIcon("Matricula"))"></span></th>
@@ -54,17 +54,6 @@
                             }
                         </tbody>
                     </table>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-end">
-                            <li class="page-item ">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                           
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
                 }
                 @if (Alunos.Count == 0 && !isLoading)
                 {

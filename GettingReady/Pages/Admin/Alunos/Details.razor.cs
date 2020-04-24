@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,10 @@ namespace GettingReady.Pages.Admin.Alunos
     {
         [Parameter]
         public int AlunoId { get; set; }
-        public AlunoData Aluno { get; set; }
+        [Inject]
+        public HttpClient Client { get; set; }
+        public AlunoData Aluno { get; set; } = new AlunoData(); 
+        public bool isLoading { get; set; } = true;
 
 
         protected override async Task OnInitializedAsync()
@@ -22,6 +26,13 @@ namespace GettingReady.Pages.Admin.Alunos
         }
         protected async Task Load()
         {
+            Client = new HttpClient();
+            Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
+            isLoading = true;
+            Aluno.AlunoInfo = await Client.GetJsonAsync<Aluno>($"/api/Alunos/{AlunoId}");
+            Aluno.Disciplinas = new List<Disciplina>();
+            isLoading = false;
+
         }
     }
 }

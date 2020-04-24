@@ -52,29 +52,7 @@ namespace GettingReady.Pages.Admin.Professores
             aux = await Client.GetJsonAsync<List<Professor>>("/api/Professores");
             aux.OrderBy(x => x.Nome);
             Professores = aux;
-            PaginarProfessores();
             isLoading = false;
-        }
-
-        protected void Paginacao(int quant)
-        {
-            Pagina.ItensPagina = quant;
-            Pagina.Total = Professores.Count / quant;
-            PaginarProfessores();
-            StateHasChanged();
-        }
-
-        protected void PaginarProfessores()
-        {
-            Professores = aux.Skip((Pagina.Atual - 1) * Pagina.ItensPagina)
-                .Take(Pagina.ItensPagina).ToList();
-        }
-
-        protected void NextPage(int page)
-        {
-            Pagina.Atual = page;
-            PaginarProfessores();
-            StateHasChanged();
         }
 
         protected void SortTable(string campoOrdenar)
