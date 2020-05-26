@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Model
 {
-    public class Professor
+    public class Professor:Entidade
     {
-        public int Id { get; set; }
         public string Nome { get; set; }
     }
 }

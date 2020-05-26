@@ -9,6 +9,5 @@ namespace GettingReady.Model
     public class Curso:Entidade
     {
         public string Nome { get; set; }
-        public IList<Aluno> Alunos { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@page "/Admin/Professores/Index"
+﻿@page "/Admin/Professores/List"
 @inherits ListProfessor
 
 <section class="content-header">
@@ -52,6 +52,20 @@
                             }
                         </tbody>
                     </table>
+                    <ul class="pagination pagination-sm m-0 float-right">
+                        @for (int i = 0; i < Pagina.Total; i++)
+                        {
+                            if (Pagina.Atual == i + 1)
+                            {
+                                <li class="page-item"><a class="page-link" href="#" style="background-color:darkgray">@i+1</a></li>
+                            }
+                            else
+                            {
+                                <li class="page-item"><a class="page-link" @onclick="(()=>NextPage(i+1))">@i+1</a></li>
+                            }
+
+                        }
+                    </ul>
                 }
                 @if (isLoading)
                 {

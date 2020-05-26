@@ -1,0 +1,44 @@
+﻿@page "/Admin/Disciplinas/Detail/{DisciplinaId:int}"
+@inherits DetailBase
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Detalhe</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="Admin/Disciplinas/Index">Disciplinas</a></li>
+                    <li class="breadcrumb-item active">Info</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fa fa-user"></i>
+                    <b class="ml-3" style="font-size:15pt">Dados da disciplinas</b>
+                </h3>
+            </div>
+            <div class="card-body">
+                @if (disciplina != null)
+                {
+    <div class="row">
+        <div class="col-sm-4 mb-3">
+            <label for="Matricula">Id</label>
+            <div id="Matricula">@disciplina.Id</div>
+        </div>
+        <div class="col-sm-4 mb-3">
+            <label for="Nome">Nome</label>
+            <div id="Nome">@disciplina.Nome.ToUpper()</div>
+        </div>
+    </div>}
+            </div>
+        </div> <!-- /.card-body -->
+    </div>
+</section>

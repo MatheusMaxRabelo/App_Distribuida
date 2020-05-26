@@ -1234,11 +1234,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady.csproj",
+      "projectUniqueName": "C:\\Users\\mathe\\Desktop\\Dad_Ready\\GettingReady\\GettingReady.csproj",
       "projectName": "GettingReady",
-      "projectPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady.csproj",
+      "projectPath": "C:\\Users\\mathe\\Desktop\\Dad_Ready\\GettingReady\\GettingReady.csproj",
       "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\obj\\",
+      "outputPath": "C:\\Users\\mathe\\Desktop\\Dad_Ready\\GettingReady\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1315,7 +1315,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

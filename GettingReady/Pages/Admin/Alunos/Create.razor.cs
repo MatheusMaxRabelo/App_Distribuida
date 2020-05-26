@@ -37,7 +37,6 @@ namespace GettingReady.Pages.Admin.Alunos
         {
             Alunos = new List<Aluno>();
             Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
-           // Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             StateHasChanged();
         }
 
@@ -58,12 +57,16 @@ namespace GettingReady.Pages.Admin.Alunos
                             break;
                         }
                         var aluno = info.Split(';');
-                        Alunos.Add(new Aluno
+                        if (aluno[0]!="Id")
                         {
-                            Matricula = Convert.ToInt32(aluno[0]),
-                            Nome = aluno[1],
-                            CursoId = Convert.ToInt32(aluno[2])
-                        });
+                            Alunos.Add(new Aluno
+                            {
+                                Matricula = Convert.ToInt32(aluno[0]),
+                                Nome = aluno[1],
+                                CursoId = Convert.ToInt32(aluno[2])
+                            });
+                        }
+                       
                     }
                 }
             }
