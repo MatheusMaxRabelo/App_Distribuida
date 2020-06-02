@@ -9,6 +9,7 @@ namespace GettingReady.Pages.Admin.Turmas
 {
     public class EditBase:ComponentBase
     {
-        
+        [Parameter]
+        public int TurmaId { get; set; }
     }
 }

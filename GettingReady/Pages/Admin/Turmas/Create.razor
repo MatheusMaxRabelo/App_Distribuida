@@ -1,98 +1,118 @@
 ﻿@page "/Admin/Turmas/Create"
 @inherits CreateBase
 
-<EditForm Model="turma" OnSubmit="Submit">
-    @MonitorId
-    @ProfessorId
-    @DisciplinaId
-    @turma.detalhesMonitoria
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h1>Editar</h1>
+    <EditForm Model="turma">
+        <DataAnnotationsValidator />
+        <ValidationSummary style=" color:red" />
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Adicionar</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="Admin/Turmas/Index">Turmas</a></li>
+                            <li class="breadcrumb-item active">Adicionar</li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="Admin/Turmas/Index">Turmas</a></li>
-                        <li class="breadcrumb-item active">Adicionar</li>
-                    </ol>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <section class="content">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">
-                        <b>Adicionar Turma</b>
-                    </h3>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-5 mb-3">
-                            <label for="Data">Monitor</label>
-                            <div class="input-group">
-                                <InputSelect @bind-Value="MonitorId" class="form-control" placeholder="Data" id="Data">
-                                    @foreach (var monitor in Alunos)
-                                    {
-                                        if (monitor.Matricula == turma.monitorMatricula)
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <b>Adicionar Turma</b>
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <span style="color:red">@message</span>
+                        <div class="row">
+                            <div class="col-sm-5 mb-3">
+                                <label for="Data">Monitor *</label>
+                                <div class="input-group">
+                                    <InputSelect @bind-Value="turma.monitorMatricula" class="form-control" placeholder="Data" id="Data">
+                                        <option>Selecione um monitor</option>
+                                        @foreach (var monitor in Alunos)
                                         {
-                                            <option value=@monitor.Matricula selected>@monitor.Nome</option> }
-                                        else
+                                            if (monitor.Matricula == turma.monitorMatricula)
+                                            {
+                                                <option value=@monitor.Matricula selected>@monitor.Nome</option> }
+                                            else
+                                            {
+                                                <option value=@monitor.Matricula>@monitor.Nome</option>}
+                                        }
+                                    </InputSelect>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 mb-3">
+                                <label for="Data">Professor *</label>
+                                <div class="input-group">
+                                    <InputSelect @bind-Value="turma.ProfessorId" class="form-control" placeholder="Data" id="Data">
+                                        <option>Selecione um professor</option>
+                                        @foreach (var professor in Professores)
                                         {
-                                            <option value=@monitor.Matricula>@monitor.Nome</option>}
-                                    }
-                                </InputSelect>
+                                            if (professor.Id == turma.ProfessorId)
+                                            {
+                                                <option value=@professor.Id selected>@professor.Nome</option> }
+                                            else
+                                            {
+                                                <option value=@professor.Id>@professor.Nome</option>}
+                                        }
+                                    </InputSelect>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-5 mb-3">
-                            <label for="Data">Professor</label>
-                            <div class="input-group">
-                                <InputSelect @bind-Value="ProfessorId" class="form-control" placeholder="Data" id="Data">
-                                    @foreach (var professor in Professores)
-                                    {
-                                        if (professor.Id == turma.ProfessorId)
+                        <div class="row">
+                            <div class="col-sm-5 mb-3">
+                                <label for="Data">Disciplina *</label>
+                                <div class="input-group">
+                                    <InputSelect @bind-Value="turma.DisciplinaId" class="form-control" placeholder="Data" id="Data">
+                                        <option>Selecione uma Disciplina</option>
+                                        @foreach (var disciplina in Disciplinas)
                                         {
-                                            <option value=@professor.Id selected>@professor.Nome</option> }
-                                        else
-                                        {
-                                            <option value=@professor.Id>@professor.Nome</option>}
-                                    }
-                                </InputSelect>
+                                            if (disciplina.Id == turma.DisciplinaId)
+                                            {
+                                                <option value=@disciplina.Id selected>@disciplina.Nome</option> }
+                                            else
+                                            {
+                                                <option value=@disciplina.Id>@disciplina.Nome</option>}
+                                        }
+                                    </InputSelect>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5 mb-3">
-                            <label for="Data">Disciplina</label>
-                            <div class="input-group">
-                                <InputSelect @bind-Value="DisciplinaId" class="form-control" placeholder="Data" id="Data">
-                                    @foreach (var disciplina in Disciplinas)
-                                    {
-                                        if (disciplina.Id == turma.DisciplinaId)
-                                        {
-                                            <option value=@disciplina.Id selected>@disciplina.Nome</option> }
-                                        else
-                                        {
-                                            <option value=@disciplina.Id>@disciplina.Nome</option>}
-                                    }
-                                </InputSelect>
+                        <div class="row">
+                            <div class="col-sm-5 mb-3">
+                                <label for="Data">Detalhes</label>
+                                <div class="input-group">
+                                    <InputTextArea @bind-Value="@turma.detalhesMonitoria" class="form-control"></InputTextArea>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <label for="Data">Semestre</label>
+                                <div class="input-group">
+                                    <InputSelect @bind-Value="semestre" class="form-control" placeholder="Data" id="Data">
+                                        <option value=0 selected>Selecione um semestre...</option>
+                                        <option value=1>1º</option>
+                                        <option value=2>2º</option>
+                                    </InputSelect>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 mb-3">
+                                <label for="Data">Ano</label>
+                                <div class="input-group">
+                                    <InputNumber @bind-Value="ano" class="form-control" placeholder="ano" id="Data" disabled />
+                                </div>
                             </div>
                         </div>
+                        <button @onclick="@(()=>Navigation.NavigateTo("/Admin/Turmas/Index"))" class="btn btn-outline-danger btn-sm ml-1 mr-1" style="float:right">Cancelar</button>
+                        <button @onclick="@Submit" class="btn btn-outline-info btn-sm" style="float:right">Salvar</button>
                     </div>
-                    <div class="col-sm-5 mb-3">
-                        <label for="Data">Curso</label>
-                        <div class="input-group">
-                            <InputTextArea @bind-Value="@turma.detalhesMonitoria"  class="form-control"></InputTextArea>
-                        </div>
-                    </div>
-                    <button @onclick="@(()=>Navigation.NavigateTo("/Admin/Alunos/List"))" class="btn btn-outline-danger btn-sm ml-1 mr-1" style="float:right">Cancelar</button>
-                    <button type="submit" class="btn btn-outline-info btn-sm" style="float:right">Salvar</button>
                 </div>
             </div>
-            </div>
-    </section>
+        </section>
 
-</EditForm>
+    </EditForm>

@@ -1234,11 +1234,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mathe\\Desktop\\Dad_Ready\\GettingReady\\GettingReady.csproj",
+      "projectUniqueName": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady.csproj",
       "projectName": "GettingReady",
-      "projectPath": "C:\\Users\\mathe\\Desktop\\Dad_Ready\\GettingReady\\GettingReady.csproj",
+      "projectPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\GettingReady.csproj",
       "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mathe\\Desktop\\Dad_Ready\\GettingReady\\obj\\",
+      "outputPath": "C:\\Users\\mathe\\Desktop\\App_Distribuida\\GettingReady\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

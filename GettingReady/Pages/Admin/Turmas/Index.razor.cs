@@ -22,7 +22,7 @@ namespace GettingReady.Pages.Admin.Turmas
         public HttpClient Client { get; set; }
         public int TurmaId { get; set; }
         public List<Turma> Turmas { get; set; } = new List<Turma>();
-        public List<Turma> aux { get; set; }
+        public List<Turma> aux { get; set; } = new List<Turma>();
         public bool isFiltered { get; set; } = false;
         public bool isSortedAsc { get; set; } = false;
         public string OrdenarPor { get; set; }
@@ -46,7 +46,6 @@ namespace GettingReady.Pages.Admin.Turmas
         {
             isLoading = true;
             aux = await Client.GetJsonAsync<List<Turma>>("/api/Turmas");
-            aux.OrderBy(x => x.Id);
             Turmas = aux;
             isLoading = false;
         }
@@ -116,7 +115,7 @@ namespace GettingReady.Pages.Admin.Turmas
                 Turmas.Clear();
                 StateHasChanged();
                 await Client.DeleteAsync($"/api/turmas/{TurmaId}");
-                Message = "Turma deletado com sucesso!";
+                Message = "Turma deletada com sucesso!";
                 MessageColor = "Color:Green";
                 await GetTurmas();
                 StateHasChanged();
