@@ -30,7 +30,7 @@ namespace GettingReady.Pages.Admin.Professores
         public string OrdenarPor { get; set; }
         public string Message { get; set; } = string.Empty;
         public string MessageColor { get; set; } = string.Empty;
-        public bool isLoading { get; set; } = false;
+        public bool isLoading { get; set; } = true;
 
         protected async override Task OnInitializedAsync()
         {
@@ -41,8 +41,7 @@ namespace GettingReady.Pages.Admin.Professores
         {
             Client = new HttpClient();
             Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
-            Professores = await Client.GetJsonAsync<List<Professor>>("/api/Professores");
-            Console.WriteLine(Professores.Count) ;
+            await GetProfessores();
             StateHasChanged();
         }
 
@@ -86,9 +85,9 @@ namespace GettingReady.Pages.Admin.Professores
                 return "fa-sort-down";
         }
 
-        protected void NavigateTo(int id)
+        protected void NavigateTo(string page, int id)
         {
-            navigationManager.NavigateTo($"Admin/Professores/Detail/{id}");
+            navigationManager.NavigateTo($"Admin/Professores/{page}/{id}");
         }
 
         protected void DeleteProfessor(int matricula)

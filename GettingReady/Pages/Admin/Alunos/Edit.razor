@@ -1,2 +1,115 @@
-﻿@page "/Admin/Alunos/Edit/{id:int}"
+﻿@page "/Admin/Alunos/Edit/{AlunoId:int}"
 @inherits EditPage
+
+<EditForm Model="aluno" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary style=" color:red" />
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Editar</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="Admin/Alunos/List">Alunos</a></li>
+                        <li class="breadcrumb-item active">Edit</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fa fa-user"></i>
+                        <b class="ml-3" style="font-size:15pt">Dados do aluno</b>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @if (aluno != null)
+                    {
+                <div class="row">
+                    <div class="col-sm-2 mb-3">
+                        <label for="Matricula">Matricula</label>
+                        <div class="input-group">
+                            <input type="number" @bind="aluno.Matricula" class="form-control" placeholder="Matricula" id="Matricula" disabled />
+
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- text input -->
+                    <div class="col-sm-4 mb-3">
+                        <label for="Nome">Nome</label>
+                        <div class="input-group">
+                            <InputText @bind-Value="aluno.Nome" class="form-control" placeholder="Nome" id="Nome" />
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mb-3">
+                        <label for="Data">Curso</label>
+                        <div class="input-group">
+                            <InputSelect @bind-Value="cursoid" class="form-control" placeholder="Data" id="Data">
+                                @foreach (var curso in Cursos)
+                                    {
+                                        if (curso.Id == aluno.CursoId)
+                                        {
+                <option value=@curso.Id selected>@curso.Nome</option> }
+                else
+                {
+                <option value=@curso.Id>@curso.Nome</option>}
+            }
+                            </InputSelect>
+                        </div>
+                    </div>
+                    @if (aluno.Avatar != null)
+                    {
+                <div class="col-sm-4 mb-3">
+                    <label for="Nome">Avatar</label>
+                    <div class="input-group">
+                        <InputText @bind-Value="aluno.Avatar.aparecencia" class="form-control" placeholder="Nome" id="Nome" />
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                        </div>
+                    </div>
+                </div>}
+                </div>}
+                    @if (aluno == null)
+                    {
+                <svg style="margin: auto; background: none; display: block; shape-rendering: auto;" width="150px" height="150px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <rect x="17.5" y="30" width="15" height="40" fill="#30b3e9">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="10;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="80;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                    </rect>
+                    <rect x="42.5" y="30" width="15" height="40" fill="#15e99c">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                    </rect>
+                    <rect x="67.5" y="29.8408" width="15" height="40.3183" fill="#2eaac7">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                    </rect>
+                </svg>
+                                    <h2>
+                                        <center>
+                                            <p class="">Buscando alunos aguarde...</p>
+                                        </center>
+                                    </h2>}
+                    <button @onclick="@(()=>Navigation.NavigateTo("/Admin/Alunos/List"))" class="btn btn-outline-danger btn-sm ml-1 mr-1" style="float:right">Cancelar</button>
+                    <button type="submit" class="btn btn-outline-info btn-sm" style="float:right">Salvar</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</EditForm>

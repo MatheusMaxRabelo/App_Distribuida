@@ -13,6 +13,5 @@ namespace GettingReady.Model
         public int CursoId { get; set; }
         public Curso Curso { get; set; }
         public Avatar Avatar { get; set; }
-        public bool identificadorMonitor { get; set; }
     }
 }

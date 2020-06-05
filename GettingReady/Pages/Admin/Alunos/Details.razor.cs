@@ -14,9 +14,9 @@ namespace GettingReady.Pages.Admin.Alunos
     {
         [Parameter]
         public int AlunoId { get; set; }
+        public AlunoData Aluno { get; set; }
         [Inject]
         public HttpClient Client { get; set; }
-        public AlunoData Aluno { get; set; } = new AlunoData(); 
         public bool isLoading { get; set; } = true;
 
 
@@ -26,13 +26,11 @@ namespace GettingReady.Pages.Admin.Alunos
         }
         protected async Task Load()
         {
+            Aluno = new AlunoData();
             Client = new HttpClient();
             Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
-            isLoading = true;
-            Aluno.AlunoInfo = await Client.GetJsonAsync<Aluno>($"/api/Alunos/{AlunoId}");
-            Aluno.Disciplinas = new List<Disciplina>();
-            isLoading = false;
-
+            Aluno.AlunoInfo = await Client.GetJsonAsync<Aluno>($"api/Alunos/{AlunoId}");
+            Aluno.Disciplinas = await Client.GetJsonAsync<List<Disciplina>>($"api/Alunos/disciplinas_aluno?matricula={AlunoId}");
         }
     }
 }

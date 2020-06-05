@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,9 @@ namespace GettingReady.Pages.Admin.Professores
         [Parameter]
         public int ProfessorId { get; set; }
         public ProfessorData Professor { get; set; }
+        [Inject]
+        public HttpClient Client { get; set; }
+        public bool isLoading { get; set; } = true;
 
 
         protected override async Task OnInitializedAsync()
@@ -22,37 +26,10 @@ namespace GettingReady.Pages.Admin.Professores
         }
         protected async Task Load()
         {
-
-            List<Disciplina> disc = new List<Disciplina>();
-            disc.Add(new Disciplina
-            {
-                Id = 4001,
-                Nome = "Algoritmo e Estrutura de Dados"
-            });
-            disc.Add(new Disciplina
-            {
-                Id = 4002,
-                Nome = "Aplicações Distribuídas"
-            });
-            disc.Add(new Disciplina
-            {
-                Id = 4003,
-                Nome = "Tecnologias Web"
-            });
-            disc.Add(new Disciplina
-            {
-                Id = 4004,
-                Nome = "Cálculo 1"
-            });
-            Professor = new ProfessorData
-            {
-                ProfessorInfo = new Model.Professor
-                {
-                    Id = 111111,
-                    Nome = "Kleber Jacques Ferreira de Souza"
-                },
-                Disciplinas = disc
-            };
+            Professor = new ProfessorData();
+            Client = new HttpClient();
+            Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
+            Professor.ProfessorInfo = await Client.GetJsonAsync<Professor>($"api/Professores/{ProfessorId}");
         }
     }
 }

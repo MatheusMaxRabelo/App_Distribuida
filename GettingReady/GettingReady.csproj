@@ -23,7 +23,6 @@
     <Folder Include="Pages\Monitor\" />
     <Folder Include="Pages\Professor\Materiais\" />
     <Folder Include="Pages\Professor\Monitoria\" />
-    <Folder Include="Validation\" />
   </ItemGroup>
 
 </Project>

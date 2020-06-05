@@ -1,0 +1,95 @@
+﻿@page "/Admin/Turmas/Index"
+@inherits IndexBase
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Todas as turmas</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item active">Turmas</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fa fa-list"></i>
+                    <b class="ml-3" style="font-size:15pt">Lista de turmas</b>
+                </h3>
+                <a href="/Admin/Turmas/Create" class="btn btn-info btn-sm" style="float:right"><span><i class="fa fa-plus mr-1"></i>Adicionar</span></a>
+            </div>
+            <div class="card-body">
+                <span style="@MessageColor">@Message</span>
+                @if (Turmas.Count > 0)
+                {
+    <table id="example2" class="table table-striped table-bordered dataTable">
+        <thead>
+            <tr>
+                <th @onclick="@(() => SortTable("Id"))">Id <span class="fa @(SortIcon("Id"))"></span></th>
+                <th>Disciplina</th>
+                <th>Professor</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var turma in Turmas)
+            {
+<tr>
+    <td>@turma.Id</td>
+    <td>@turma.Disciplina.Nome.ToUpperInvariant()</td>
+    <td>@turma.professor.Nome.ToUpperInvariant()</td>
+    <td style="width:105px">
+        <button type="button" class="btn btn-outline-info btn-sm" @onclick="(()=>NavigateTo('d',turma.Id))"><span><i class="fa fa-eye"></i></span></button>
+        <button type="button" class="btn btn-outline-warning btn-sm" @onclick="(()=>NavigateTo('e',turma.Id))"><span><i class="fa fa-edit"></i></span></button>
+        <button type="button" class="btn btn-outline-danger btn-sm" @onclick="(()=>ConfirmDelete(turma.Id,turma.Disciplina.Nome.ToUpperInvariant()))"><span><i class="fa fa-trash"></i></span></button>
+    </td>
+</tr>
+}
+        </tbody>
+    </table>}
+                @if (Turmas.Count == 0 && !isLoading)
+                {
+    <p class="">Nenhuma turma cadastrada!</p>
+                    <table id="example2" class=" mt-4 table table-striped table-bordered dataTable">
+                        <thead>
+                            <tr>
+                                <th @onclick="@(() => SortTable("Id"))">Id <span class="fa @(SortIcon("Id"))"></span></th>
+                                <th>Disciplina</th>
+                                <th>Professor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>}
+
+                @if (isLoading)
+                {
+    <svg style="margin: auto; background: none; display: block; shape-rendering: auto;" width="150px" height="150px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <rect x="17.5" y="30" width="15" height="40" fill="#30b3e9">
+            <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="10;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+            <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="80;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+        </rect>
+        <rect x="42.5" y="30" width="15" height="40" fill="#15e99c">
+            <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+            <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+        </rect>
+        <rect x="67.5" y="29.8408" width="15" height="40.3183" fill="#2eaac7">
+            <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+            <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+        </rect>
+    </svg>
+                    <h2>
+                        <center>
+                            <p class="">Buscando turmas aguarde...</p>
+                        </center>
+                    </h2>}
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div><!-- /.container-fluid -->
+</section>

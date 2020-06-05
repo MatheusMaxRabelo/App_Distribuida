@@ -8,6 +8,6 @@ namespace GettingReady.Model
 {
     public class Avatar: Entidade
     {
-        public Object aparencia { get; set; }
+        public string aparecencia { get; set; }
     }
 }

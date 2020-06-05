@@ -3,7 +3,6 @@ using Blazored.Modal.Services;
 using GettingReady.Model;
 using GettingReady.Shared.Componentes;
 using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Pages.Admin.Alunos
 {
-    public class ListPage:ComponentBase
+    public class ListPage : ComponentBase
     {
         [Inject]
         public NavigationManager navigationManager { get; set; }
@@ -21,7 +20,7 @@ namespace GettingReady.Pages.Admin.Alunos
         public IModalService Modal { get; set; }
         [Inject]
         public HttpClient Client { get; set; }
-        public Paginas Pagina { get; set; } = new Paginas { Atual =1,ItensPagina = 10 };
+        public Paginas Pagina { get; set; } = new Paginas { Atual = 1, ItensPagina = 10 };
         public int AlunoId { get; set; }
         public List<Aluno> aux { get; set; }
         public List<Aluno> Alunos { get; set; } = new List<Aluno>();
@@ -72,6 +71,25 @@ namespace GettingReady.Pages.Admin.Alunos
             StateHasChanged();
         }
 
+        protected void Paginacao(int quant)
+        {
+            Pagina.ItensPagina = quant;
+            Pagina.Total = Alunos.Count / quant;
+            PaginarAlunos();
+            StateHasChanged();
+        }
+        protected void PaginarAlunos()
+        {
+            Pagina.Total = Alunos.Count / Pagina.ItensPagina;
+            Alunos = aux.Skip((Pagina.Atual - 1) * Pagina.ItensPagina)
+                .Take(Pagina.ItensPagina).ToList();
+        }
+        protected void NextPage(int page)
+        {
+            Pagina.Atual = page;
+            PaginarAlunos();
+            StateHasChanged();
+        }
         protected string SortIcon(string campoOrdenado)
         {
             if (OrdenarPor != campoOrdenado)
@@ -83,9 +101,21 @@ namespace GettingReady.Pages.Admin.Alunos
                 return "fa-sort-down";
         }
 
-        protected void NavigateTo(int id)
+        protected void NavigateTo(char page, int id)
         {
-            navigationManager.NavigateTo($"Admin/Alunos/Detail/{id}");
+            if (page == 'd')
+            {
+                Console.WriteLine("Saca os detalhes");
+                navigationManager.NavigateTo($"Admin/Alunos/Detail/{id}");
+                            }
+
+            else if (page == 'e')
+            {
+                Console.WriteLine("Estou editando");
+                navigationManager.NavigateTo($"Admin/Alunos/Edit/{id}");
+            }
+            GetAlunos();
+            StateHasChanged();
         }
 
         protected void ConfirmDelete(int matricula, string nome)
@@ -95,24 +125,25 @@ namespace GettingReady.Pages.Admin.Alunos
             parameters.Add("Mensagem", $"Tem certeza que deseja apagar o aluno \n {nome.ToUpper()} ?");
             parameters.Add("SimText", "Confirmar");
             parameters.Add("NaoText", "Cancelar");
-
             Modal.OnClose += ModalClose;
             Modal.Show<ConfirmDelete>("Deletar aluno", parameters);
         }
 
         private async void ModalClose(ModalResult result)
-        {
+        {            
             if (!result.Cancelled)
             {
+                isLoading = true;
+                Alunos.Clear();
+                StateHasChanged();
                 await Client.DeleteAsync($"/api/alunos/{AlunoId}");
                 Message = "Aluno deletado com sucesso!";
                 MessageColor = "Color:Green";
-                Alunos = null;
-                await GetAlunos();
+                await GetAlunos();                
                 StateHasChanged();
             }
-
-            Modal.OnClose-=ModalClose;
+            isLoading = false;
+            Modal.OnClose -= ModalClose;
         }
     }
 }
