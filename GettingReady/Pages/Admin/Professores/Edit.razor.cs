@@ -1,6 +1,6 @@
 ﻿using GettingReady.Model;
-using GettingReady.ViewModel.Admin;
 using Microsoft.AspNetCore.Components;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,26 +10,36 @@ using System.Threading.Tasks;
 
 namespace GettingReady.Pages.Admin.Professores
 {
-    public class DetailsProfessor : ComponentBase
+    public class EditProfessor : ComponentBase
     {
         [Parameter]
         public int ProfessorId { get; set; }
-        public ProfessorData Professor { get; set; }
         [Inject]
+        public NavigationManager Navigation { get; set; }
         public HttpClient Client { get; set; }
         public bool isLoading { get; set; } = true;
-
+        public Professor professor { get; set; }
+        
 
         protected override async Task OnInitializedAsync()
         {
             await Load();
         }
+
         protected async Task Load()
         {
-            Professor = new ProfessorData();
             Client = new HttpClient();
             Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
-            Professor.ProfessorInfo = await Client.GetJsonAsync<Professor>($"api/Professores/{ProfessorId}");
+            professor = await Client.GetJsonAsync<Professor>($"api/Professores/{ProfessorId}");
+            StateHasChanged();
+        }
+
+        protected async void Submit()
+        {
+            var jsonContent = JsonConvert.SerializeObject(professor);
+            Console.WriteLine(jsonContent);
+            await Client.PutJsonAsync($"api/Professores/{ProfessorId}", professor);
+            Navigation.NavigateTo("/Admin/Professores/List");
         }
     }
 }
