@@ -1,67 +1,71 @@
 ﻿@page "/Admin/Turmas/Create"
 @inherits CreateBase
 
-    <EditForm Model="turma">
-        <DataAnnotationsValidator />
-        <ValidationSummary style=" color:red" />
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h1>Adicionar</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="Admin/Turmas/Index">Turmas</a></li>
-                            <li class="breadcrumb-item active">Adicionar</li>
-                        </ol>
-                    </div>
+<EditForm Model="turma" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary style=" color:red" />
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Adicionar</h1>
                 </div>
-            </div><!-- /.container-fluid -->
-        </section>
-        <section class="content">
-            <div class="container-fluid">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">
-                            <b>Adicionar Turma</b>
-                        </h3>
-                    </div>
-                    <div class="card-body">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="Admin/Turmas/Index">Turmas</a></li>
+                        <li class="breadcrumb-item active">Adicionar</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <b>Adicionar Turma</b>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @if (!isLoading)
+                    {
                         <span style="color:red">@message</span>
                         <div class="row">
                             <div class="col-sm-5 mb-3">
                                 <label for="Data">Monitor *</label>
                                 <div class="input-group">
-                                    <InputSelect @bind-Value="turma.monitorMatricula" class="form-control" placeholder="Data" id="Data">
-                                        <option>Selecione um monitor</option>
+                                    <select @bind="turma.monitorMatricula" class="form-control" placeholder="Data" id="Data">
                                         @foreach (var monitor in Alunos)
                                         {
                                             if (monitor.Matricula == turma.monitorMatricula)
                                             {
-                                                <option value=@monitor.Matricula selected>@monitor.Nome</option> }
+                                                <option value=@monitor.Matricula selected>@monitor.Nome</option>
+                                            }
                                             else
                                             {
-                                                <option value=@monitor.Matricula>@monitor.Nome</option>}
+                                                <option value=@monitor.Matricula>@monitor.Nome</option>
+                                            }
                                         }
-                                    </InputSelect>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-sm-5 mb-3">
                                 <label for="Data">Professor *</label>
                                 <div class="input-group">
-                                    <InputSelect @bind-Value="turma.ProfessorId" class="form-control" placeholder="Data" id="Data">
-                                        <option>Selecione um professor</option>
+                                    <select @bind="turma.ProfessorId" class="form-control" placeholder="Data" id="Data">
                                         @foreach (var professor in Professores)
                                         {
                                             if (professor.Id == turma.ProfessorId)
                                             {
-                                                <option value=@professor.Id selected>@professor.Nome</option> }
+                                                <option value=@professor.Id selected>@professor.Nome</option>
+                                            }
                                             else
                                             {
-                                                <option value=@professor.Id>@professor.Nome</option>}
+                                                <option value=@professor.Id>@professor.Nome</option>
+                                            }
                                         }
-                                    </InputSelect>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -69,18 +73,19 @@
                             <div class="col-sm-5 mb-3">
                                 <label for="Data">Disciplina *</label>
                                 <div class="input-group">
-                                    <InputSelect @bind-Value="turma.DisciplinaId" class="form-control" placeholder="Data" id="Data">
-                                        <option>Selecione uma Disciplina</option>
+                                    <select @bind="turma.DisciplinaId" class="form-control" placeholder="Data" id="Data">
                                         @foreach (var disciplina in Disciplinas)
                                         {
                                             if (disciplina.Id == turma.DisciplinaId)
                                             {
-                                                <option value=@disciplina.Id selected>@disciplina.Nome</option> }
+                                                <option value=@disciplina.Id selected>@disciplina.Nome</option>
+                                            }
                                             else
                                             {
-                                                <option value=@disciplina.Id>@disciplina.Nome</option>}
+                                                <option value=@disciplina.Id>@disciplina.Nome</option>
+                                            }
                                         }
-                                    </InputSelect>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -94,25 +99,107 @@
                             <div class="col-sm-4 mb-3">
                                 <label for="Data">Semestre</label>
                                 <div class="input-group">
-                                    <InputSelect @bind-Value="semestre" class="form-control" placeholder="Data" id="Data">
-                                        <option value=0 selected>Selecione um semestre...</option>
+                                    <select @bind="semestre" class="form-control" placeholder="Data" id="Data">
+                                        <option value="" selected>Selecione um semestre...</option>
                                         <option value=1>1º</option>
                                         <option value=2>2º</option>
-                                    </InputSelect>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-sm-3 mb-3">
                                 <label for="Data">Ano</label>
                                 <div class="input-group">
-                                    <InputNumber @bind-Value="ano" class="form-control" placeholder="ano" id="Data" disabled />
+                                    <input type="number" @bind="ano" class="form-control" placeholder="ano" id="Data" disabled />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">
+                                            <b>Alunos disponiveis</b>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body.P-0">
+                                        <table id="example2" class=" mt-4 table table-striped table-bordered dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th></th>
+                                                </tr>
+                                                
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var aluno in Disponivel)
+                                                {
+                                                    <tr>
+                                                        <td>@aluno.Nome.ToUpperInvariant()</td>
+                                                        <td style="width:10px"> 
+                                                            <button type="button" class="btn btn-outline-info btn-sm" @onclick="(()=>IncluiAluno(aluno.Matricula))"><span><i class="fa fa-plus"></i></span></button>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">
+                                            <b>Alunos incluídos</b>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body.P-0">
+                                        <table id="example2" class=" mt-4 table table-striped table-bordered dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var aluno in Incluido)
+                                                {
+                                                    <tr>
+                                                        <td>@aluno.Nome.ToUpperInvariant()</td>
+                                                        <td style="width:10px">
+                                                            <button type="button" class="btn btn-outline-danger btn-sm" @onclick="(()=>RemoveAluno(aluno.Matricula))"><span><i class="fa fa-trash"></i></span></button>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <button @onclick="@(()=>Navigation.NavigateTo("/Admin/Turmas/Index"))" class="btn btn-outline-danger btn-sm ml-1 mr-1" style="float:right">Cancelar</button>
-                        <button @onclick="@Submit" class="btn btn-outline-info btn-sm" style="float:right">Salvar</button>
-                    </div>
+                        <button type="submit" class="btn btn-outline-info btn-sm" style="float:right">Salvar</button>
+                    }
+                    else
+                    {
+                        <svg style="margin: auto; background: none; display: block; shape-rendering: auto;" width="150px" height="150px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <rect x="17.5" y="30" width="15" height="40" fill="#30b3e9">
+                                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="10;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="80;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                            </rect>
+                            <rect x="42.5" y="30" width="15" height="40" fill="#15e99c">
+                                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                            </rect>
+                            <rect x="67.5" y="29.8408" width="15" height="40.3183" fill="#2eaac7">
+                                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                            </rect>
+                        </svg>
+                    }
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </EditForm>
+</EditForm>

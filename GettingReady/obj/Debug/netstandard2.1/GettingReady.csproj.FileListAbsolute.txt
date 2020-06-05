@@ -555,14 +555,11 @@ C:\Users\mathe\Desktop\Dad_Ready\GettingReady\obj\Debug\netstandard2.1\RazorDecl
 C:\Users\mathe\Desktop\Dad_Ready\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Create.razor.g.cs
 C:\Users\mathe\Desktop\Dad_Ready\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\mathe\Desktop\Dad_Ready\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Index.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.blazor.config
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\Properties\launchSettings.json
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.StaticWebAssets.xml
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.blazor.config
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.pdb
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\wasm\mono.js
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\wasm\mono.wasm
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\blazor.webassembly.js
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\_bin\Blazored.Modal.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\_bin\BlazorInputFile.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\_bin\GettingReady.dll
@@ -600,6 +597,9 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dis
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\_bin\WebAssembly.Net.Http.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\_bin\GettingReady.pdb
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\blazor.boot.json
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\wasm\mono.js
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\wasm\mono.wasm
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\dist\_framework\blazor.webassembly.js
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\Blazored.Modal.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\BlazorInputFile.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\Microsoft.AspNetCore.Authorization.dll
@@ -626,7 +626,6 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\Sys
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\System.Text.Encodings.Web.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\System.Text.Json.dll
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\System.Threading.Tasks.Extensions.dll
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csprojAssemblyReference.cache
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.AssemblyInfoInputs.cache
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.AssemblyInfo.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csproj.CoreCompileInputs.cache
@@ -645,6 +644,7 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Raz
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\Details.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\List.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Create.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Details.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Index.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
@@ -672,6 +672,7 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Raz
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\Details.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\List.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Create.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Details.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Index.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
@@ -689,5 +690,4 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Get
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.pdb
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\blazor.boot.json
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Details.razor.g.cs
-C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Details.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csprojAssemblyReference.cache
