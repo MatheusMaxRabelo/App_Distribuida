@@ -1,6 +1,7 @@
 ﻿using GettingReady.Model;
 using GettingReady.ViewModel.Admin;
 using Microsoft.AspNetCore.Components;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,10 @@ namespace GettingReady.Pages.Admin.Turmas
     {
         [Parameter]
         public int TurmaId { get; set; }
-        public Turma_Alunos turma { get; set; }
+        public List<Turma_Alunos> turma { get; set; }
         [Inject]
         public HttpClient Client { get; set; }
         public bool isLoading { get; set; } = true;
-        public bool isEditing { get; set; }
-        public List<Aluno> alunosAux { get; set; } = new List<Aluno>();
 
         protected override async Task OnInitializedAsync()
         {
@@ -27,11 +26,11 @@ namespace GettingReady.Pages.Admin.Turmas
         }
         protected async Task Load()
         {
-            turma = new Turma_Alunos();
+            isLoading = true;
             Client = new HttpClient();
             Client.BaseAddress = new Uri("https://trabalhocleber.azurewebsites.net");
-            turma = await Client.GetJsonAsync<Turma_Alunos>($"/api/Turmas/turmaAlunos/{TurmaId}");
-            alunosAux = turma.alunos;
+            turma = await Client.GetJsonAsync<List<Turma_Alunos>>($"api/Turmas/turmaAlunos/{TurmaId}");
+            isLoading = !isLoading;
         }
     }
 }

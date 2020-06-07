@@ -79,20 +79,18 @@ namespace GettingReady.Pages.Admin.Turmas
                 return "fa-sort-down";
         }
 
-        protected void NavigateTo(char page, int id)
+        protected async void NavigateTo(char page, int id)
         {
             if (page == 'd')
             {
-                Console.WriteLine("Saca os detalhes");
-                navigationManager.NavigateTo($"Admin/Turmas/Detail/{id}");
+                navigationManager.NavigateTo($"Admin/Turmas/all/{id}");
             }
 
             else if (page == 'e')
             {
-                Console.WriteLine("Estou editando");
                 navigationManager.NavigateTo($"Admin/Turmas/Edit/{id}");
             }
-            GetTurmas();
+            await GetTurmas();
             StateHasChanged();
         }
 

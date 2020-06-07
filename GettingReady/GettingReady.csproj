@@ -21,8 +21,8 @@
     <Folder Include="Pages\Admin\Disciplinas\" />
     <Folder Include="Pages\Admin\Professores\" />
     <Folder Include="Pages\Monitor\" />
-    <Folder Include="Pages\Professor\Materiais\" />
-    <Folder Include="Pages\Professor\Monitoria\" />
+    <Folder Include="Pages\user_professores\Materiais\" />
+    <Folder Include="Pages\user_professores\Monitoria\" />
   </ItemGroup>
 
 </Project>

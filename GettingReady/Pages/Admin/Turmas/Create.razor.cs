@@ -60,18 +60,10 @@ namespace GettingReady.Pages.Admin.Turmas
         }
         public async void Submit()
         {
-            if (Incluido.Count == 0)
-            {
-                message = "Não se pode criar turma sem alunos";
-                StateHasChanged();
-            }
-            else
-            {
                 isLoading = true;
                 var jsonContent = JsonConvert.SerializeObject(turma);
                 Console.WriteLine(jsonContent);
                 Turma_Alunos.turma = await Client.PostJsonAsync<Turma>($"api/Turmas", turma);
-                Turma_Alunos.alunos = new List<Aluno>();
                 Turma_Alunos.semestre = semestre;
                 Turma_Alunos.ano = ano;
                 Turma_Alunos.alunos = Incluido;
@@ -79,7 +71,6 @@ namespace GettingReady.Pages.Admin.Turmas
                 Console.WriteLine(jsonContent);
                 await Client.PostJsonAsync($"api/Turmas/alunosturma", Turma_Alunos);
                 Navigation.NavigateTo("Admin/Turmas/Index");
-            }
         }
     }
 }

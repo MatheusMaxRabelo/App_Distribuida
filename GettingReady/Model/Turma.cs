@@ -16,6 +16,7 @@ namespace GettingReady.Model
         //public Aluno Monitor { get; set; }
         [DiferenteDeZero(ErrorMessage = "Campo Monitor é obrigatório")]
         public int monitorMatricula { get; set; }
+        public Aluno Monitor { get; set; }
         [DiferenteDeZero(ErrorMessage = "Campo Professor é obrigatório")]
         public int ProfessorId { get; set; }
         public Professor professor { get; set; }

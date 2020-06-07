@@ -1,11 +1,10 @@
-﻿@page "/Admin/Turmas/Detail/{TurmaId:int}"
+﻿@page "/Admin/Turmas/all/{TurmaId:int}"
 @inherits DetailsBase
 
 <section class="content-header">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <h1>Detalhe</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -21,56 +20,112 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
-                    <i class="fa fa-user"></i>
-                    <b class="ml-3" style="font-size:15pt">Dados da Turma</b>
+                    <i class="fa fa-clipboard"></i>
+                    <b class="ml-3" style="font-size:15pt">
+                        @if (!isLoading)
+                        {
+                            @turma[0].turma.Disciplina.Nome.ToUpperInvariant()
+                        }
+                    </b>
                 </h3>
+                <a href="/Admin/Turmas/Create/@TurmaId" class="btn btn-info btn-sm" style="float:right"><span><i class="fa fa-plus mr-1"></i>Adicionar</span></a>
             </div>
-            <div class="card-body">
-                @if (turma != null)
-                {
-                    <div class="row">
-                        <div class="col-sm-4 mb-3">
-                            <label for="Matricula">Id</label>
-                            <div id="Matricula">@turma.turma.Id</div>
-                        </div>
-                        <div class="col-sm-4 mb-3">
-                            <label for="Nome">Disciplina</label>
-                            <div id="Nome">@turma.turma.Disciplina.Nome</div>
-                        </div>
-                        <div class="col-sm-4 mb-3">
-                            <label for="Nome">Semestre</label>
-                            <div id="Nome">@turma.semestre º/@turma.ano</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 mb-3">
-                            <label for="Curso">Curso</label>
-                            <div id="Curso">@turma.turma.professor.Nome</div>
-                        </div>
-                    </div>
-                    <div class="card card-widget collapsed-card">
-                        <div class="card-header bg-gradient-info" data-card-widget="collapse">
-                            <div class="user-block">
-                                <i class="ion ion-ios-user mr-2"></i> Alunos
-                            </div>
-                            <!-- /.user-block -->
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
+        </div>
+        @if (!isLoading && turma != null)
+        {
+            @foreach (var item in turma)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa fa-user"></i>
+                            <b class="ml-3" style="font-size:15pt">Dados da Turma - @item.semestre º / @item.ano</b>
+                        </h3>
+                        <a href="/Admin/Turmas/Edit/@TurmaId/@item.ano/@item.semestre" class="btn btn-warning btn-sm" style="float:right"><span><i class="fa fa-pen mr-1"></i>Editar</span></a>
                     </div>
                     <div class="card-body">
-                        @if (true)
-                        {
-
-                        }
-                        <table id="example2" class="table table-striped table-bordered dataTable">
-                        </table>
+                        <div class="row">
+                            <div class="col-sm-3 mb-3">
+                                <label for="Matricula">Id</label>
+                                <div id="Matricula">@item.turma.Id</div>
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <label for="Nome">Disciplina</label>
+                                <div id="Nome">@item.turma.Disciplina.Nome.ToUpperInvariant()</div>
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <label for="professor">Professor</label>
+                                <div id="professor">@item.turma.professor.Nome.ToUpperInvariant()</div>
+                            </div>
+                            <!--  <div class="col-sm-4 mb-3">
+                                <label for="Curso">Curso</label>
+                                <div id="Curso">@item.turma.Monitor.Curso.Nome.ToUpperInvariant()</div>
+                            </div>
+                              -->
+                            <div class="col-sm-3 mb-3">
+                                <label for="Monitor">Monitor</label>
+                                <div id="Monitor">@item.turma.Monitor.Nome.ToUpperInvariant()</div>
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <label for="Detalhes">Detalhes</label>
+                                <div id="Detalhes">@item.turma.detalhesMonitoria.ToUpperInvariant()</div>
+                            </div>
+                        </div>
+                        <div class="card card-widget collapsed-card">
+                            <div class="card-header bg-gradient-info" data-card-widget="collapse">
+                                <div class="user-block">
+                                    <i class="ion ion-ios-book-outline mr-2"></i> Possui <b>@item.alunos.Count</b>  alunos
+                                </div>
+                                <!-- /.user-block -->
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table id="example2" class="table table-striped table-bordered dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Matricula</th>
+                                            <th> Nome</th>
+                                            <th>Curso</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var aluno in item.alunos)
+                                        {
+                                            <tr>
+                                                <td>@aluno.Matricula</td>
+                                                <td>@aluno.Nome.ToUpper()</td>
+                                                <td>@aluno.Curso.Nome.ToUpper()</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                }
-            </div>
-        </div> <!-- /.card-body -->
+                </div>
+            }
+
+        }
+        else
+        {
+            <svg style="margin: auto; background: none; display: block; shape-rendering: auto;" width="150px" height="150px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <rect x="17.5" y="30" width="15" height="40" fill="#30b3e9">
+                    <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="10;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                    <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="80;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                </rect>
+                <rect x="42.5" y="30" width="15" height="40" fill="#15e99c">
+                    <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                    <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                </rect>
+                <rect x="67.5" y="29.8408" width="15" height="40.3183" fill="#2eaac7">
+                    <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                    <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                </rect>
+            </svg>
+        } <!-- /.card-body -->
     </div>
 </section>
