@@ -642,11 +642,14 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Raz
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Disciplinas\Index.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\Create.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\Details.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Professores\List.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Create.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Details.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Index.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Vincular\Create.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Vincular\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Shared\Componentes\ConfirmDelete.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
@@ -670,11 +673,14 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Raz
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Disciplinas\Index.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\Create.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\Details.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Professores\List.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Create.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Details.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Index.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Vincular\Create.razor.g.cs
+C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Vincular\Edit.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Shared\Componentes\ConfirmDelete.razor.g.cs
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
@@ -691,6 +697,7 @@ C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Get
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\blazor.boot.json
 C:\Users\mathe\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csprojAssemblyReference.cache
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.TagHelpers.output.cache
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\Properties\launchSettings.json
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.blazor.config
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\GettingReady.StaticWebAssets.xml
@@ -762,7 +769,6 @@ C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\System.Text.Encodings.Web.dll
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\System.Text.Json.dll
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\bin\Debug\netstandard2.1\System.Threading.Tasks.Extensions.dll
-C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csprojAssemblyReference.cache
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csproj.CoreCompileInputs.cache
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.RazorComponent.input.cache
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\App.razor.g.cs
@@ -784,6 +790,8 @@ C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Admin\Turmas\Index.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\user_Professor\Questoes\Create.razor.g.cs
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\user_Professor\Questoes\Index.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Shared\Componentes\ConfirmDelete.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -792,7 +800,6 @@ C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\GettingReady.dll
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.TagHelpers.input.cache
-C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.TagHelpers.output.cache
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.RazorCoreGenerate.cache
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\App.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Access\Login.razor.g.cs
@@ -813,6 +820,8 @@ C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Edit.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Admin\Turmas\Index.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\user_Professor\Questoes\Create.razor.g.cs
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\user_Professor\Questoes\Index.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Shared\Componentes\ConfirmDelete.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
@@ -829,3 +838,4 @@ C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.pdb
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\blazor.boot.json
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csprojAssemblyReference.cache

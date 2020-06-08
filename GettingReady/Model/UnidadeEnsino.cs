@@ -10,5 +10,6 @@ namespace GettingReady.Model
     {
         public string Nome { get; set; }
         public int DisciplinaId { get; set; }
+        public Disciplina Disciplina { get; set; }
     }
 }

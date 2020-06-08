@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\user_professores\**" />
+    <Content Remove="Pages\user_professores\**" />
+    <EmbeddedResource Remove="Pages\user_professores\**" />
+    <None Remove="Pages\user_professores\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Blazored.Modal" Version="3.1.2" />
     <PackageReference Include="BlazorInputFile" Version="0.1.0-preview-00002" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.1.0-preview4.19579.2" />
@@ -21,8 +28,6 @@
     <Folder Include="Pages\Admin\Disciplinas\" />
     <Folder Include="Pages\Admin\Professores\" />
     <Folder Include="Pages\Monitor\" />
-    <Folder Include="Pages\Professor\Materiais\" />
-    <Folder Include="Pages\Professor\Monitoria\" />
   </ItemGroup>
 
 </Project>

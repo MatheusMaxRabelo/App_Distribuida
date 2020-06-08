@@ -21,7 +21,6 @@ namespace GettingReady.Pages.Admin.Professores
         [Inject]
         public HttpClient Client { get; set; }
 
-        public Paginas Pagina { get; set; } = new Paginas { Atual = 1, ItensPagina = 15 };
         public int ProfessorId { get; set; }
         public List<Professor> aux { get; set; }
         public List<Professor> Professores { get; set; } = new List<Professor>();
