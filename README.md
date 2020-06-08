@@ -5,11 +5,11 @@ Trabalho apresentado na disciplina Desenvolvimento de Aplicações Distribuídas
 # Funcionalidades
 
 Administrador
-• Ser capaz de incluir alunos e professores no sistema através de um arquivo estruturado;
-• Ser capaz de cadastrar disciplinas;
-• Ser capaz de vincular um professor a uma disciplina;
-• Ser capaz de vincular as disciplinas a um determinado período.
-• Ser capaz de tornar um aluno em monitor;
-Professor
-• Ser capaz de manter questões;
-• Ser capaz de incluir materiais de apoio de acordo com o tema proposto;
+<br>• Ser capaz de incluir alunos e professores no sistema através de um arquivo estruturado;
+<br>• Ser capaz de cadastrar disciplinas;
+<br>• Ser capaz de vincular um professor a uma disciplina;
+<br>• Ser capaz de vincular as disciplinas a um determinado período.
+<br>• Ser capaz de tornar um aluno em monitor;
+<br><br>Professor
+<br>• Ser capaz de manter questões;
+<br>• Ser capaz de incluir materiais de apoio de acordo com o tema proposto;
