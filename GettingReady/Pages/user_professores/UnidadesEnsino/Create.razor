@@ -1,0 +1,83 @@
+﻿@page "/Professor/Unidades/Create"
+@inherits CreateBase
+<EditForm Model="unidade" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary style=" color:red" />
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Adicionar</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="professor/unidades/Index">Unidade de Ensino</a></li>
+                        <li class="breadcrumb-item active">Adicionar</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <b>Adicionar Unidade de Ensino</b>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @if (!isLoading)
+                    {
+                        <div class="row">
+                            <div class="col-sm-5 mb-3">
+                                <label for="Data">Nome</label>
+                                <div class="input-group">
+                                    <input type="text" @bind="unidade.Nome" @bind:event="oninput" class="form-control" placeholder="Nome da Matéria" id="Data"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 mb-3">
+                                <label for="Data">Disciplinas</label>
+                                <div class="input-group">
+                                    <select @bind="unidade.DisciplinaId" class="form-control" placeholder="Disciplinas" id="Data">
+                                        @foreach (var disciplina in Disciplinas)
+                                        {
+                                            if (disciplina.Id == unidade.DisciplinaId)
+                                            {
+                                                <option value=@disciplina.Id selected>@disciplina.Nome.ToUpperInvariant()</option>
+                                            }
+                                            else
+                                            {
+                                                <option value=@disciplina.Id>@disciplina.Nome.ToUpperInvariant()</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button @onclick="@(()=>Navigation.NavigateTo("/professor/unidades/Index"))" class="btn btn-outline-danger btn-sm ml-1 mr-1" style="float:right">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-info btn-sm" style="float:right">Salvar</button>
+                    }
+                    else
+                    {
+                        <svg style="margin: auto; background: none; display: block; shape-rendering: auto;" width="150px" height="150px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <rect x="17.5" y="30" width="15" height="40" fill="#30b3e9">
+                                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="10;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="80;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.3s" />
+                            </rect>
+                            <rect x="42.5" y="30" width="15" height="40" fill="#15e99c">
+                                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" />
+                            </rect>
+                            <rect x="67.5" y="29.8408" width="15" height="40.3183" fill="#2eaac7">
+                                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="15;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="70;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" />
+                            </rect>
+                        </svg>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+</EditForm>
