@@ -839,3 +839,5 @@ C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\blazor\blazor.boot.json
 C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\GettingReady.csprojAssemblyReference.cache
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\RazorDeclaration\Pages\user_Professor\Questoes\Details.razor.g.cs
+C:\Users\Merizito\Desktop\App_Distribuida\GettingReady\obj\Debug\netstandard2.1\Razor\Pages\user_Professor\Questoes\Details.razor.g.cs

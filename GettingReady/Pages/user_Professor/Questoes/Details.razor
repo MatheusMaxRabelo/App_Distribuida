@@ -1,0 +1,126 @@
+﻿@page "/Professor/Questoes/Detail/{QuestaoId:int}"
+@inherits DetailsBase
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Detalhe</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="Professor/Questoes/Index">Questões</a></li>
+                    <li class="breadcrumb-item active">Info</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fa fa-user"></i>
+                    <b class="ml-3" style="font-size:15pt">Dados da questão</b>
+                </h3>
+            </div>
+            <div class="card-body">
+                @if (Questao.QuestaoInfo != null)
+                {
+                    <div class="row">
+                        <div class="col-sm-4 mb-3">
+                            <label for="Matricula">Id Questão</label>
+                            <div id="Matricula">@Questao.QuestaoInfo.Id</div>
+                        </div>
+                        <div class="col-sm-4 mb-3">
+                            <label for="Nome">Assunto</label>
+                            <div id="Nome">@Questao.QuestaoInfo.Assunto.Nome</div>
+                        </div>
+                    </div>
+
+
+                }
+                <div class="card card-widget collapsed-card">
+                    @if (Questao.QuestaoInfo != null)
+                    {
+                        <div class="card-header bg-gradient-info" data-card-widget="collapse">
+                            <div class="user-block">
+                                <i class="ion ion-ios-book-outline mr-2"></i> Questão <b>@Questao.QuestaoInfo.Id</b>
+                            </div>
+                            <!-- /.user-block -->
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div> <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example2" class="table table-striped table-bordered dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Assunto</th>
+                                        <th>Professor</th>
+                                        <th>Pergunta</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>@Questao.QuestaoInfo.Assunto.Nome</td>
+                                        <td>@Questao.QuestaoInfo.Professor.Nome</td>
+                                        <td>@Questao.QuestaoInfo.Pergunta</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div> <!-- /.card-footer -->}
+
+                </div>
+
+                <div class="card card-widget collapsed-card">
+                    @if (Questao.QuestaoInfo != null)
+                    {
+                        <div class="card-header bg-gradient-info" data-card-widget="collapse">
+                            <div class="user-block">
+                                <i class="ion ion-ios-book-outline mr-2"></i> Alternativas e resposta da questão <b>@Questao.QuestaoInfo.Id</b>
+                            </div>
+                            <!-- /.user-block -->
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div> <!-- /.card-header -->
+
+                        <div class="card-body">
+                            <table id="example2" class="table table-striped table-bordered dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Alternativa 1</th>
+                                        <th>Alternativa 2</th>
+                                        <th>Alternativa 3</th>
+                                        <th>Alternativa 4</th>
+                                        <th>Resposta</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>@Questao.QuestaoInfo.opcao_0</td>
+                                        <td>@Questao.QuestaoInfo.opcao_1</td>
+                                        <td>@Questao.QuestaoInfo.opcao_2</td>
+                                        <td>@Questao.QuestaoInfo.opcao_3</td>
+                                        <td>@Questao.QuestaoInfo.resposta</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div> <!-- /.card-body -->
+    </div>
+</section>
